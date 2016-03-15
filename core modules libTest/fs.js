@@ -41,4 +41,19 @@ fs.writeFile ('./lib/sample.md', md.trim(), function(err){
   console.log('File Created');
 });
 
-//file streams, process.stdin
+//file streams
+var stream = fs.createReadStream("./lib/testFS.json", "UTF-8");
+var data = "";
+console.log("Start Reading File");
+
+stream.once("data", function(){
+  console.log("Started Reading File");
+});
+
+stream.on("data", function(chunk){
+  process.stdout.write(`  chunk: ${chunk.lenght} |`);
+  data+=chunk;
+});
+stream.on ("end", function(){
+  console.log("End Reading File");
+});
