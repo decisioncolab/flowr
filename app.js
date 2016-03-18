@@ -43,6 +43,16 @@ app.get("/term-api" , function(req, res){
   res.json(terms);
 });
 
+app.post ("/term-api", function(req, res){
+  terms.push(req.body);
+  res.json(terms);
+});
+
+/*
+app.delete ("/term-api", function (req, res){
+});
+*/
+
 app.listen(3000);
 
 console.log("Express app running on port 3000");
