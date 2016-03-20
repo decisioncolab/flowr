@@ -1,11 +1,11 @@
-
+//
 var express = require("express");
 var cors = require("cors");//cross origin for APIs
 var bodyParser = require ("body-parser");//middleware to format post data
 
 var app = express();
 
-//dummy data create
+//dummy data create for testing
 var terms = [
   {
     term:"term1",
@@ -43,7 +43,9 @@ app.get("/term-api" , function(req, res){
   res.json(terms);
 });
 
-app.post ("/term-api", function(req, res){
+//handle post request made by html form
+app.post ("/term-post", function(req, res){
+  console.log(req.body);
   terms.push(req.body);
   res.json(terms);
 });
