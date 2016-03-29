@@ -1,0 +1,20 @@
+#stars-frame .glyphicon {
+    margin: 0.3em;
+    font-size: 1.75 em;
+}
+
+#stars-frame, #answer-frame {
+    width: 40%;
+    float: left;
+}
+
+#button-frame {
+    width: 20%;
+    float: left;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#stars-frame .well, #answer-frame .well {
+    height: 150px;
+}

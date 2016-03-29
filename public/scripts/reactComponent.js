@@ -125,5 +125,5 @@ var PRODUCTS = [
 
 ReactDOM.render(
   <FilterableProductTable products={PRODUCTS} />,
-  document.getElementById('content')
+  document.getElementById('reactComponent')
 );
